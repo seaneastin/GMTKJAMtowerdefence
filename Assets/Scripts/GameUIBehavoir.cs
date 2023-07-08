@@ -10,6 +10,7 @@ public class GameUIBehavoir : MonoBehaviour
     public GameObject youlost;
     public Slider healthbar;
     public Text moraletext;
+
     // Start is called before the first frame update
     void Start()
     {
