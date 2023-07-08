@@ -23,8 +23,16 @@ public class toRagdollBehavior : MonoBehaviour
     }
     public void ragdoll()
     {
-        characterController.enabled = false;
-        animator.enabled = false;
+        if (characterController)
+        {
+            characterController.enabled = false;
+        }
+        
+        if (animator)
+        {
+            animator.enabled = false;
+        }
+
         Isragdoll = true;
     }
 
