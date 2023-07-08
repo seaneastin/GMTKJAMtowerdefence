@@ -7,7 +7,7 @@ public class toRagdollBehavior : MonoBehaviour
     Animator animator;
     CharacterController characterController;
     public bool timeractive = true;
-    float timer = 600;
+    float timer = 20;
     bool Isragdoll = false;
     // Start is called before the first frame update
     void Start()
@@ -49,7 +49,7 @@ public class toRagdollBehavior : MonoBehaviour
             {
                 Destroy();
             }
-            timer = timer - 1;
+            timer -= Time.deltaTime;
         }
 
 
