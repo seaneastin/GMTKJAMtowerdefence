@@ -9,12 +9,14 @@ public class Projectile : MonoBehaviour
     public bool CanExplode;
     public int explosionRadius;
     public int explosionforce;
+    public int speed;
 
     // Start is called before the first frame update
     void Start()
     {
             projectile = gameObject.GetComponent<CharacterController>();
             _forward = gameObject.transform.forward.normalized;
+        _forward *= speed;
     }
 
     // Update is called once per frame

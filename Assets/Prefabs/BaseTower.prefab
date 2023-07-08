@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3070513967256598989}
   - component: {fileID: 3070513967256598993}
   - component: {fileID: 3070513967256598992}
+  - component: {fileID: 4497596245630883801}
   m_Layer: 0
   m_Name: BaseTower
   m_TagString: Untagged
@@ -113,6 +114,22 @@ MonoBehaviour:
   projectile: {fileID: 1837743175515976514, guid: e9ee5ae08ece2b54caf9bb8e3f07b72c,
     type: 3}
   triger: {fileID: 0}
+--- !u!208 &4497596245630883801
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3070513967256598991}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.135, y: 1.83, z: 0.00001}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &3070513967380108263
 GameObject:
   m_ObjectHideFlags: 0
