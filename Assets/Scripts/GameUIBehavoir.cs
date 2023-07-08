@@ -44,10 +44,10 @@ public class GameUIBehavoir : MonoBehaviour
         Loadlevel(1);
     }
 
-    public void SetHealth(int health)
+    public void SetHealth(float health,float maxhealth)
     {
         healthbar.value = health;
-        moraletext.text = health + "/";
+        moraletext.text = health + "/" + maxhealth;
     }
 
 }

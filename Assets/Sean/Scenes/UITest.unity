@@ -778,8 +778,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameUI: {fileID: 1213235763}
   youlost: {fileID: 1811441003}
-  healthbar: {fileID: 0}
-  moraletext: {fileID: 0}
+  healthbar: {fileID: 2032127881}
+  moraletext: {fileID: 981510306}
 --- !u!1 &981510304
 GameObject:
   m_ObjectHideFlags: 0
@@ -792,7 +792,7 @@ GameObject:
   - component: {fileID: 981510307}
   - component: {fileID: 981510306}
   m_Layer: 5
-  m_Name: Text
+  m_Name: moraletext
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -830,7 +830,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1106,7 +1106,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Melody Please add game
+  m_Text: Melody please add game
 --- !u!222 &1317000775
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1577,6 +1577,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1865146048}
+  - component: {fileID: 1865146049}
   m_Layer: 0
   m_Name: playertest
   m_TagString: Untagged
@@ -1598,6 +1599,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1865146049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865146047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b397a4f88f924c409a3073a47595d51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UI: {fileID: 923535635}
+  morale: 1
+  maxmorale: 100
 --- !u!1 &2032127879
 GameObject:
   m_ObjectHideFlags: 0
@@ -1634,7 +1650,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -260.47647, y: 168}
+  m_AnchoredPosition: {x: -244.47, y: 172.39}
   m_SizeDelta: {x: 359.05872, y: 66.42435}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2032127881
