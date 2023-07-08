@@ -205,7 +205,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 13.89
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: -2.62, z: 0}
 --- !u!114 &4799445628357488106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,3 +220,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 1837743175515976514, guid: e9ee5ae08ece2b54caf9bb8e3f07b72c,
     type: 3}
+  time: 10
