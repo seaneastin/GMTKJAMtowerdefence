@@ -10,6 +10,7 @@ public class GameUIBehavoir : MonoBehaviour
     public GameObject youlost;
     public Slider healthbar;
     public Text moraletext;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -44,10 +45,10 @@ public class GameUIBehavoir : MonoBehaviour
         Loadlevel(1);
     }
 
-    public void SetHealth(int health)
+    public void SetHealth(float health,float maxhealth)
     {
         healthbar.value = health;
-        moraletext.text = health + "/";
+        moraletext.text = health + "/" + maxhealth;
     }
 
 }
