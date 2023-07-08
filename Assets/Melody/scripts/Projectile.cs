@@ -31,7 +31,7 @@ public class Projectile : MonoBehaviour
         {
             if (CanExplode)
             {
-                Collider[] colliders = Physics.OverlapSphere(transform.position, 20);
+                Collider[] colliders = Physics.OverlapSphere(transform.position, explosionRadius);
                 projectile.enabled = false;
                 if (colliders.Length > 0)
                 {
