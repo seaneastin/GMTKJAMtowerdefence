@@ -1994,7 +1994,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5eb5d2c49a1cef44390bc00bedc785b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: {fileID: 1546247701}
+  timeractive: 1
 --- !u!143 &1546247705
 CharacterController:
   m_ObjectHideFlags: 0
@@ -2012,7 +2012,7 @@ CharacterController:
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &1651689259
 GameObject:
   m_ObjectHideFlags: 0
