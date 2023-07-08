@@ -1,14 +1,9 @@
 fileFormatVersion: 2
-guid: 6ef52cfd6773ab44d8edfbafeca87a6e
+guid: af9b71f428ca6174f88b417f0d3b311a
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Gabbo_Glethan
-    second: {fileID: 2100000, guid: 0a3555a0dee45cd409306606c68393e4, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 1
     materialName: 0
