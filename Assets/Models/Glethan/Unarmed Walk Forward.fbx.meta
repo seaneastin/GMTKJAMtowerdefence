@@ -6,7 +6,12 @@ ModelImporter:
   - first:
       74: -203655887218126122
     second: '-'
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gabbo_Glethan
+    second: {fileID: 2100000, guid: 044572ad26fda974f92d1b2bcea1d810, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

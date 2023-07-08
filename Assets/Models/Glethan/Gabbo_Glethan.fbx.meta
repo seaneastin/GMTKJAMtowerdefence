@@ -8,7 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Gabbo_Glethan
-    second: {fileID: 2100000, guid: 59fdc11a3b27e2242ade9b3b39a146e0, type: 2}
+    second: {fileID: 2100000, guid: 0a3555a0dee45cd409306606c68393e4, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -42,7 +42,7 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
-    useSRGBMaterialColor: 0
+    useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
