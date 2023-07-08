@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class ProjectileSpawner : MonoBehaviour
@@ -9,43 +10,66 @@ public class ProjectileSpawner : MonoBehaviour
     public GameObject projectile;
     private bool _fired;
     private bool _fire;
+    public int time;
+    private float _timer;
+    private float _originaltime;
     // Start is called before the first frame update
     void Start()
     {
         _targetset = false;
+        _originaltime = time;
+        _timer = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (_targetset)
+        if(_timer < 0)
         {
-            if (_fire)
+            _timer = 0;
+        }
+        if (_timer == 0)
+        {
+            _timer = _originaltime;
+            if (_targetset)
             {
-                gameObject.transform.LookAt(target.transform);
-                GameObject.Instantiate(projectile, gameObject.transform.position, gameObject.transform.rotation);
+                if (_fire)
+                {
+                    gameObject.transform.LookAt(target.transform);
+                    GameObject.Instantiate(projectile, gameObject.transform.position, gameObject.transform.rotation);
+                }
             }
+        }
+        if (_timer != 0 || time > 0)
+        {
+            _timer -= Time.deltaTime;
         }
     }
     public void OnTriggerStay(Collider other)
     {
-        if (!_targetset)
+        if (other.CompareTag("Goblin"))
         {
-            Debug.Log("die");
-            target = other;
-            _targetset = true;
-            _fire = true;
+            if (!_targetset)
+            {
+                Debug.Log("die");
+                target = other;
+                _targetset = true;
+                _fire = true;
+            }
         }
 
     }
     public void OnTriggerExit(Collider other)
     {
-        if (_targetset)
+        if (other.CompareTag("Goblin"))
         {
-            if (other = target)
+            if (_targetset)
             {
-                _targetset = false;
-                _fire = false;
+                if (other == target)
+                {
+                    _targetset = false;
+                    _fire = false;
+                }
             }
         }
     }
