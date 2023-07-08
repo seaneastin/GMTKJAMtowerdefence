@@ -19,7 +19,15 @@ public class toRagdollBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-  
+        if (timeractive & Isragdoll)
+        {
+            if (timer <= 0)
+            {
+                Destroy();
+            }
+            timer -= Time.deltaTime;
+        }
+
     }
     public void ragdoll()
     {
@@ -43,14 +51,7 @@ public class toRagdollBehavior : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (timeractive & Isragdoll)
-        {
-            if (timer <= 0)
-            {
-                Destroy();
-            }
-            timer -= Time.deltaTime;
-        }
+
 
 
     }
