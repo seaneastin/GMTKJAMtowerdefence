@@ -4,24 +4,46 @@ using UnityEngine;
 
 public class toRagdollBehavior : MonoBehaviour
 {
-    public GameObject character;
     Animator animator;
     CharacterController characterController;
+    public bool timeractive = true;
+    float timer = 600;
+    bool Isragdoll = false;
     // Start is called before the first frame update
     void Start()
     {
-        animator = character.GetComponent<Animator>();
-        characterController = character.GetComponent<CharacterController>();
+        animator = gameObject.GetComponent<Animator>();
+        characterController = gameObject.GetComponent<CharacterController>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
+  
     }
     public void ragdoll()
     {
         characterController.enabled = false;
         animator.enabled = false;
+        Isragdoll = true;
+    }
+
+    private void Destroy()
+    {
+        Destroy(gameObject);
+    }
+
+    private void FixedUpdate()
+    {
+        if (timeractive & Isragdoll)
+        {
+            if (timer <= 0)
+            {
+                Destroy();
+            }
+            timer = timer - 1;
+        }
+
+
     }
 }
