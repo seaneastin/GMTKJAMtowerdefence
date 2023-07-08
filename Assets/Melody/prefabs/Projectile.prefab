@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: eddb9d49236ca4147afe7aad5b37d320, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -109,6 +109,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CanExplode: 0
+  explosionRadius: 20
+  explosionforce: 20
 --- !u!143 &-836222016824042702
 CharacterController:
   m_ObjectHideFlags: 0
