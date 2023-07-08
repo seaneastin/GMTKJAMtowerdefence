@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shader Graphs_Toon Water Shader
+  m_Name: Water
   m_Shader: {fileID: -6465566751694194690, guid: 22e1f3fb702fe674a99b8abc811e7907,
     type: 3}
   m_ShaderKeywords: 
@@ -26,5 +26,5 @@ Material:
     - Vector1_AFF04331: 0.5
     - Vector1_F592B45A: 4
     m_Colors:
-    - Color_43EF3FC8: {r: 0.27100387, g: 0.30669647, b: 0.6603774, a: 0}
+    - Color_43EF3FC8: {r: 0.11764706, g: 0.39215687, b: 0.7058823, a: 0}
     - Color_63845AC3: {r: 0.7403881, g: 0.8627451, b: 1.137255, a: 0}
