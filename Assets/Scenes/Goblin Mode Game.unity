@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -470,6 +470,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Glethan Rigged
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 441a7e24db8978345a7620e9a0d9fa7b,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: d82f3cd47911de74abea467f1acf9a2d, type: 2}
     - target: {fileID: 6743425207230097202, guid: 441a7e24db8978345a7620e9a0d9fa7b,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -3124,7 +3129,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: d639f87b645f8be4cbf244c3fe717881,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.060001
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d639f87b645f8be4cbf244c3fe717881,
         type: 3}
@@ -11381,6 +11386,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Magik Gobbo Rigged
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 8807f06ba1c22dd43a3ba620c9ee4782,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 8807f06ba1c22dd43a3ba620c9ee4782,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 88207744efaae9b4fa7d48f93bd44a6f, type: 2}
     - target: {fileID: 8269304975164503573, guid: 8807f06ba1c22dd43a3ba620c9ee4782,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -12675,7 +12690,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: d639f87b645f8be4cbf244c3fe717881,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 59.06
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d639f87b645f8be4cbf244c3fe717881,
         type: 3}
@@ -12985,7 +13000,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1022007772}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.2, y: 27.6, z: -25}
+  m_LocalPosition: {x: -5.51, y: 27.6, z: -17.79}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -20009,6 +20024,99 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56a1ec2747b47dc449410fd2ece6a644, type: 3}
+--- !u!1 &1553831982
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1553831986}
+  - component: {fileID: 1553831985}
+  - component: {fileID: 1553831984}
+  - component: {fileID: 1553831983}
+  m_Layer: 0
+  m_Name: Fireball
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!135 &1553831983
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1553831982}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1553831984
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1553831982}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: e84c2d96befc054468eada3f8e627152, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1553831985
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1553831982}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1553831986
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1553831982}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.66, y: 19.39, z: 5.52}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1563593881
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22327,6 +22435,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Attack Gobbo Rigged
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 3494d86b8a50d5a4e9d639e297015262,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 3494d86b8a50d5a4e9d639e297015262,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 6df1e5b503b62d740987b97d8469e7d4, type: 2}
     - target: {fileID: 8269304975164503573, guid: 3494d86b8a50d5a4e9d639e297015262,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -23164,7 +23282,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 10d442a101c7a2d4e93a8a34261b2ad5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 30.29
+      value: 22.39
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 10d442a101c7a2d4e93a8a34261b2ad5,
         type: 3}
