@@ -19,6 +19,7 @@ public class GloblinAi : MonoBehaviour
     {
         globin = gameObject.GetComponent<NavMeshAgent>();
         _startingAttackTimer = AttackTimer;
+        _attackTimer = _startingAttackTimer;
     }
 
     // Update is called once per frame
@@ -42,11 +43,21 @@ public class GloblinAi : MonoBehaviour
     {
         target = GloblinTarget;
     }
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
-        if(other.CompareTag("Tower"))
+        if (attackmode)
         {
-
+            if (_attackTimer <= 0)
+            {
+                if (other.CompareTag("Tower"))
+                {
+                    other.GetComponent<BaseTowerProjectile>().takeDamage(1);
+                }
+            }
+            if (_attackTimer > 0)
+            {
+                _attackTimer -= Time.deltaTime;
+            }
         }
     }
 }

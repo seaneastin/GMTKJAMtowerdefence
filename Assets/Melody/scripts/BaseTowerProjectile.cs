@@ -25,8 +25,8 @@ public class BaseTowerProjectile : MonoBehaviour
     {
 
     }
-    private void OnTriggerStay(Collider other)
+    public void takeDamage(int Damage)
     {
-
+        _hp -= Damage;
     }
 }

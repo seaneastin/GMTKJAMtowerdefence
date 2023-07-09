@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 
@@ -13,9 +14,11 @@ public class Goblinarmymain : MonoBehaviour
     private GameObject _player;
     List<GameObject> _globlins = new List<GameObject>();
     public GameObject goblinLeader;
+    [SerializeField]
     private bool _goblinattack;
     public GameObject goblinSpawn;
     public GameObject goblin;
+    public GameObject target;
 
 
     // Start is called before the first frame update
@@ -37,5 +40,21 @@ public class Goblinarmymain : MonoBehaviour
     void Update()
     {
         
+    }
+    public void StartGoblinAttack(GameObject tower)
+    {
+        _target = tower;
+        for (int i = 0; i <= _globlins.Count; i++)
+        {
+            _globlins[i].GetComponent<GloblinAi>().attackmode = true;
+        }
+    }
+    public void StopGoblinAttack(GameObject Player)
+    {
+        _target = Player;
+        for (int i = 0; i <= _globlins.Count; i++)
+        {
+            _globlins[i].GetComponent<GloblinAi>().attackmode = true;
+        }
     }
 }
