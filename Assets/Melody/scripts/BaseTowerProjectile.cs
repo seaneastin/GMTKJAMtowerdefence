@@ -11,6 +11,8 @@ public class BaseTowerProjectile : MonoBehaviour
     public SphereCollider triger;
     private bool _fire;
     private GameObject _cube;
+    public MeshRenderer Tower;
+    public MeshRenderer DestroyedTower;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +28,8 @@ public class BaseTowerProjectile : MonoBehaviour
         if(_hp <= 0)
         {
             GetComponentInChildren<ProjectileSpawner>().enabled = false;
+            Tower.enabled = false;
+            DestroyedTower.enabled = true;
         }
     }
     public void takeDamage(int Damage)
