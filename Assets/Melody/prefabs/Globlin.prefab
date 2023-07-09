@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 912572269023650324}
   - component: {fileID: 5180612159583636358}
   - component: {fileID: 2279492601415740467}
+  - component: {fileID: 184180728065216007}
+  - component: {fileID: 8737456322606168103}
   m_Layer: 0
   m_Name: Globlin
   m_TagString: Goblin
@@ -130,10 +132,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47d99a1ba550f144ea20e73a68068159, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 0
+  Health: 1
   target: {fileID: 0}
   attackmode: 0
   AttackTimer: 10
+  DeathTimer: 0
+  Damage: 0
 --- !u!65 &2279492601415740467
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -147,3 +151,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 0.75260067}
   m_Center: {x: 0, y: 0, z: 0.87630033}
+--- !u!65 &184180728065216007
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7092369337432998115}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.25, y: 1.25, z: 1.25}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &8737456322606168103
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7092369337432998115}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
