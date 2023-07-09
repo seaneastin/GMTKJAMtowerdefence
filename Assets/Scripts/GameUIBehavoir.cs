@@ -34,15 +34,14 @@ public class GameUIBehavoir : MonoBehaviour
         Cursor.visible = true;
     }    
 
-
     public void Newgame()
     {
-        Loadlevel(1);
+        Loadlevel(3);
     }
 
     public void Leavegame()
     {
-        Loadlevel(1);
+        Loadlevel(0);
     }
 
     public void SetHealth(int health)

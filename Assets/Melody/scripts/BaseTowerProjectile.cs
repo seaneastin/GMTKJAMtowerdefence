@@ -36,4 +36,8 @@ public class BaseTowerProjectile : MonoBehaviour
     {
         _hp -= Damage;
     }
+    public int getHealth()
+    {
+        return _hp;
+    }
 }

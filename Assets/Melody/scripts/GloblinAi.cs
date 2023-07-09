@@ -16,6 +16,8 @@ public class GloblinAi : MonoBehaviour
     public int DeathTimer;
     private bool Dead;
     public int Damage;
+    public toRagdollBehavior ragdoll;
+    public Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -28,19 +30,25 @@ public class GloblinAi : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float speed = globin.speed;
+        if (animator)
+        {
+            if (speed >= 1)
+            {
+                animator.SetBool("isWalking", true);
+            }
+            else
+            {
+                animator.SetBool("isWalking", false);
+            }
+        }    
+        
         globin.destination = target.transform.position;
         if (Dead)
         {
             attackmode = false;
             gameObject.GetComponent<NavMeshAgent>().enabled = false;
-            if(_attackTimer > 0)
-            {
-                _attackTimer -= Time.deltaTime;
-            }
-            if (_attackTimer <= 0)
-            {
-                GameObject.Destroy(gameObject);
-            }
+            ragdoll.ragdoll();
 
         }
     }

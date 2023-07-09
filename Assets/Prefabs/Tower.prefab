@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 3070513967256598991}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.6441994, y: 1.14, z: 4.847673}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_Children:
   - {fileID: 3070513967380108260}
   - {fileID: 5776358645799937076}
@@ -110,8 +110,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71839b57f17894c4f97a876d86dffd46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Hp: 0
-  projectile: {fileID: 1837743175515976514, guid: e9ee5ae08ece2b54caf9bb8e3f07b72c,
+  Hp: 500
+  projectile: {fileID: 1837743175515976514, guid: f56095e126d90ad4e9dd05ad227cfc1c,
     type: 3}
   triger: {fileID: 0}
   Tower: {fileID: 4639432511480831835}
@@ -126,7 +126,7 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 1.135, y: 1.83, z: 0.00001}
+  m_Extents: {x: 1.135, y: 1.83, z: 0.285}
   m_MoveThreshold: 0.1
   m_Carve: 1
   m_CarveOnlyStationary: 1
@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 3070513967380108264}
   m_Layer: 0
   m_Name: death
-  m_TagString: Untagged
+  m_TagString: Fire
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -224,8 +224,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 13.89
-  m_Center: {x: 0, y: 4.75, z: 0}
+  m_Radius: 4
+  m_Center: {x: 0, y: -1.17, z: 0}
 --- !u!114 &3070513967380108264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,7 +238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73f56164c94230340952c86de2a87c60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 1837743175515976514, guid: e9ee5ae08ece2b54caf9bb8e3f07b72c,
+  projectile: {fileID: 1837743175515976514, guid: f56095e126d90ad4e9dd05ad227cfc1c,
     type: 3}
   time: 10
 --- !u!1001 &5303888256417773780
@@ -316,6 +316,11 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 10d442a101c7a2d4e93a8a34261b2ad5,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 10d442a101c7a2d4e93a8a34261b2ad5,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 10d442a101c7a2d4e93a8a34261b2ad5,

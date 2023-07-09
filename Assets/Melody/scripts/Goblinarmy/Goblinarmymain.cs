@@ -34,11 +34,24 @@ public class Goblinarmymain : MonoBehaviour
             thisgloblin = _globlins[i];
             thisgloblin.gameObject.GetComponent<GloblinAi>().target = goblinLeader;
         }
+
+        _maxGoblins = maxGoblins;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKey("1"))
+        {
+            for (int i = 0; i <= _maxGoblins - _globlins.Count; i++)
+            {
+                GameObject thisgloblin;
+                thisgloblin = GameObject.Instantiate(goblin, goblinSpawn.transform.position, goblinSpawn.transform.rotation);
+                _globlins.Add(thisgloblin);
+                thisgloblin = _globlins[i];
+                thisgloblin.gameObject.GetComponent<GloblinAi>().target = goblinLeader;
+            }
+        }
         foreach(GameObject goblin in _globlins)
         {
             if (goblin.GetComponent<GloblinAi>().getHealth() <= 0)
@@ -47,21 +60,28 @@ public class Goblinarmymain : MonoBehaviour
                 goblin.GetComponent<GloblinAi>().die();
             }
         } 
+        if(_target.GetComponent<BaseTowerProjectile>().getHealth() <= 0)
+        {
+            StopGoblinAttack(goblinLeader);
+        }
     }
     public void StartGoblinAttack(GameObject tower)
     {
         _target = tower;
-        for (int i = 0; i <= _globlins.Count; i++)
+        for (int i = 0; i <= _globlins.Count - 1; i++)
         {
             _globlins[i].GetComponent<GloblinAi>().attackmode = true;
+
+            _globlins[i].GetComponent<GloblinAi>().SetTarget(tower);
         }
     }
     public void StopGoblinAttack(GameObject Player)
     {
         _target = Player;
-        for (int i = 0; i <= _globlins.Count; i++)
+        for (int i = 0; i <= _globlins.Count - 1; i++)
         {
-            _globlins[i].GetComponent<GloblinAi>().attackmode = true;
+            _globlins[i].GetComponent<GloblinAi>().attackmode = false;
+            _globlins[i].GetComponent<GloblinAi>().SetTarget(Player);
         }
     }
 }
