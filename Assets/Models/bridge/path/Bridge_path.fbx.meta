@@ -1,14 +1,9 @@
 fileFormatVersion: 2
-guid: 8807f06ba1c22dd43a3ba620c9ee4782
+guid: 4fa77bfa470fa634bbd448bab52ff6ff
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: MagikGobbo
-    second: {fileID: 2100000, guid: d5234a207688e154891be06767d03d2b, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -95,7 +90,7 @@ ModelImporter:
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 1
+  avatarSetup: 0
   additionalBone: 0
   userData: 
   assetBundleName: 
