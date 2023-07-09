@@ -10,6 +10,7 @@ public class Projectile : MonoBehaviour
     public int explosionRadius;
     public int explosionforce;
     public int speed;
+    public int Damage;
 
     // Start is called before the first frame update
     void Start()
@@ -43,13 +44,17 @@ public class Projectile : MonoBehaviour
                         if (rb != null)
                         {
                             rb.gameObject.GetComponent<Rigidbody>().AddExplosionForce(explosionforce, gameObject.transform.position, explosionRadius, 3, ForceMode.Impulse);
+                            rb.gameObject.GetComponent<GloblinAi>().TakeDamage(Damage);
                         }
                     }
                 }
             }
             if(!CanExplode)
             {
-                
+                if(other.CompareTag("Goblin") || other.CompareTag("Player"))
+                {
+                    other.GetComponent<GloblinAi>().TakeDamage(Damage);
+                }
             }
             GameObject.Destroy(gameObject);
             Debug.Log("help");
