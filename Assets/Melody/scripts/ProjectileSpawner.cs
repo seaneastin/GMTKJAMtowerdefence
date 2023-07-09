@@ -24,6 +24,10 @@ public class ProjectileSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (target.GetComponent<GloblinAi>().getHealth() <= 0 || target == null)
+        {
+            _targetset = false;
+        }
         if(_timer < 0)
         {
             _timer = 0;
