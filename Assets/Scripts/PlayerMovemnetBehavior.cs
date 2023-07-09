@@ -27,6 +27,7 @@ public class PlayerMovemnetBehavior : MonoBehaviour
             controller.SimpleMove(transform.forward * movement.z * speed);
             transform.Rotate(transform.up, movement.x * turnRate);
             animator.SetFloat("Speed", movement.z * speed);
+            print(movement.z * speed);
         }
     }
 }
