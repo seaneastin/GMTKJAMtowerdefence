@@ -114,6 +114,8 @@ MonoBehaviour:
   projectile: {fileID: 1837743175515976514, guid: e9ee5ae08ece2b54caf9bb8e3f07b72c,
     type: 3}
   triger: {fileID: 0}
+  Tower: {fileID: 4639432511480831835}
+  DestroyedTower: {fileID: 6798931190776013904}
 --- !u!208 &4497596245630883801
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -323,6 +325,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10d442a101c7a2d4e93a8a34261b2ad5, type: 3}
+--- !u!23 &6798931190776013904 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 10d442a101c7a2d4e93a8a34261b2ad5,
+    type: 3}
+  m_PrefabInstance: {fileID: 5303888256417773780}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6314898696082555871
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -415,6 +423,12 @@ PrefabInstance:
 --- !u!4 &5776358645799937076 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d639f87b645f8be4cbf244c3fe717881,
+    type: 3}
+  m_PrefabInstance: {fileID: 6314898696082555871}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &4639432511480831835 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: d639f87b645f8be4cbf244c3fe717881,
     type: 3}
   m_PrefabInstance: {fileID: 6314898696082555871}
   m_PrefabAsset: {fileID: 0}
