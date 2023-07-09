@@ -112,6 +112,7 @@ MonoBehaviour:
   explosionRadius: 20
   explosionforce: 20
   speed: 20
+  Damage: 1
 --- !u!143 &-836222016824042702
 CharacterController:
   m_ObjectHideFlags: 0

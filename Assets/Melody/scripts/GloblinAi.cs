@@ -13,6 +13,9 @@ public class GloblinAi : MonoBehaviour
     public int AttackTimer;
     private float _startingAttackTimer;
     private float _attackTimer;
+    public int DeathTimer;
+    private bool Dead;
+    public int Damage;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +29,20 @@ public class GloblinAi : MonoBehaviour
     void Update()
     {
         globin.destination = target.transform.position;
+        if (Dead)
+        {
+            attackmode = false;
+            gameObject.GetComponent<NavMeshAgent>().enabled = false;
+            if(_attackTimer > 0)
+            {
+                _attackTimer -= Time.deltaTime;
+            }
+            if (_attackTimer <= 0)
+            {
+                GameObject.Destroy(gameObject);
+            }
+
+        }
     }
     public int getHealth()
     {
@@ -34,10 +51,12 @@ public class GloblinAi : MonoBehaviour
     public void TakeDamage(int damage)
     {
         Health -= damage;
+        Debug.Log("I am hurt");
     }
-    private void die()
+    public void die()
     {
-
+        _attackTimer = DeathTimer;
+        Dead = true;
     }
     public void SetTarget(GameObject GloblinTarget)
     {
@@ -51,7 +70,7 @@ public class GloblinAi : MonoBehaviour
             {
                 if (other.CompareTag("Tower"))
                 {
-                    other.GetComponent<BaseTowerProjectile>().takeDamage(1);
+                    other.GetComponent<BaseTowerProjectile>().takeDamage(Damage);
                 }
             }
             if (_attackTimer > 0)

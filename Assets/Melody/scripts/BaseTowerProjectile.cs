@@ -23,7 +23,10 @@ public class BaseTowerProjectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if(_hp <= 0)
+        {
+            GetComponentInChildren<ProjectileSpawner>().enabled = false;
+        }
     }
     public void takeDamage(int Damage)
     {

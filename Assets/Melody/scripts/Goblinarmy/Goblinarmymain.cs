@@ -39,7 +39,14 @@ public class Goblinarmymain : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        foreach(GameObject goblin in _globlins)
+        {
+            if (goblin.GetComponent<GloblinAi>().getHealth() <= 0)
+            {
+                _globlins.Remove(goblin);
+                goblin.GetComponent<GloblinAi>().die();
+            }
+        } 
     }
     public void StartGoblinAttack(GameObject tower)
     {

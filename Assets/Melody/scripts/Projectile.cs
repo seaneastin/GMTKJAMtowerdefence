@@ -44,7 +44,11 @@ public class Projectile : MonoBehaviour
                         if (rb != null)
                         {
                             rb.gameObject.GetComponent<Rigidbody>().AddExplosionForce(explosionforce, gameObject.transform.position, explosionRadius, 3, ForceMode.Impulse);
-                            rb.gameObject.GetComponent<GloblinAi>().TakeDamage(Damage);
+                            if (rb.gameObject.GetComponent<GloblinAi>() != null)
+                            {
+                                Debug.Log("sja[v");
+                                rb.gameObject.GetComponent<GloblinAi>().TakeDamage(1);
+                            }
                         }
                     }
                 }
