@@ -31,6 +31,7 @@ public class GameUIBehavoir : MonoBehaviour
     {
         gameUI.SetActive(false);
         youlost.SetActive(true);
+        Cursor.visible = true;
     }    
 
 
