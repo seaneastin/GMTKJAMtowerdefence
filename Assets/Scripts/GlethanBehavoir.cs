@@ -5,7 +5,6 @@ using UnityEngine;
 public class GlethanBehavoir : MonoBehaviour
 {
     public Goblinarmymain army1;
-    public Goblinarmymain army2;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +21,6 @@ public class GlethanBehavoir : MonoBehaviour
     {
         Debug.LogError(target);
         army1.StartGoblinAttack(target);
-        army2.StartGoblinAttack(target);
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -31,5 +29,9 @@ public class GlethanBehavoir : MonoBehaviour
             Debug.Log("if you see this yay");
             Attack(other.transform.parent.gameObject);
         }
+    }
+    public void takeDamage()
+    {
+        army1.playertookdamage();
     }
 }

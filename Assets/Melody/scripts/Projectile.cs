@@ -55,9 +55,13 @@ public class Projectile : MonoBehaviour
             }
             if(!CanExplode)
             {
-                if(other.CompareTag("Goblin") || other.CompareTag("Player"))
+                if(other.CompareTag("Goblin"))
                 {
                     other.GetComponent<GloblinAi>().TakeDamage(Damage);
+                }
+                if ( other.CompareTag("Player"))
+                {
+                    other.GetComponent<GlethanBehavoir>().takeDamage();
                 }
             }
             GameObject.Destroy(gameObject);

@@ -106,11 +106,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eab20a4d5329a3446a7d4233c4fe00bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxGoblins: 0
+  maxGoblins: 10
   minGoblins: 0
   startingGlobks: 0
   goblinLeader: {fileID: 0}
   _goblinattack: 0
   goblinSpawn: {fileID: 0}
-  goblin: {fileID: 0}
+  goblin:
+  - {fileID: 2254242026398909416, guid: f33f3c4d1381b3e4699b924948f0fae3, type: 3}
+  - {fileID: 6825976317942087967, guid: 62ef350db6e1db8478efffa7e12c3ebb, type: 3}
   target: {fileID: 0}
+  StartingMorale: 0
+  MaxMorale: 0
+  DeadGoblinLimit: 0
