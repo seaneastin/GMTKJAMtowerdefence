@@ -43,12 +43,12 @@ public class Projectile : MonoBehaviour
                         Rigidbody rb = nearbyobject.GetComponent<Rigidbody>();
                         if (rb != null)
                         {
-                            rb.gameObject.GetComponent<Rigidbody>().AddExplosionForce(explosionforce, gameObject.transform.position, explosionRadius, 3, ForceMode.Impulse);
                             if (rb.gameObject.GetComponent<GloblinAi>() != null)
                             {
                                 Debug.Log("sja[v");
                                 rb.gameObject.GetComponent<GloblinAi>().TakeDamage(1);
                             }
+                            rb.gameObject.GetComponent<Rigidbody>().AddExplosionForce(explosionforce, gameObject.transform.position, explosionRadius, 3, ForceMode.Impulse);
                         }
                     }
                 }
