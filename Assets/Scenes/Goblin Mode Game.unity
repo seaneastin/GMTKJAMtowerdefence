@@ -5349,9 +5349,20 @@ PrefabInstance:
       objectReference: {fileID: 365378132}
     - target: {fileID: 4293394273317321594, guid: 647c024c54837974b902183bf98a7aa1,
         type: 3}
+      propertyPath: goblin.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4293394273317321594, guid: 647c024c54837974b902183bf98a7aa1,
+        type: 3}
       propertyPath: goblin.Array.data[0]
       value: 
       objectReference: {fileID: 2254242026398909416, guid: f33f3c4d1381b3e4699b924948f0fae3,
+        type: 3}
+    - target: {fileID: 4293394273317321594, guid: 647c024c54837974b902183bf98a7aa1,
+        type: 3}
+      propertyPath: goblin.Array.data[1]
+      value: 
+      objectReference: {fileID: 6825976317942087967, guid: 62ef350db6e1db8478efffa7e12c3ebb,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 647c024c54837974b902183bf98a7aa1, type: 3}
