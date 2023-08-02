@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
@@ -17,36 +18,51 @@ public class Goblinarmymain : MonoBehaviour
     [SerializeField]
     private bool _goblinattack;
     public GameObject goblinSpawn;
-    public GameObject goblin;
+    public GameObject[] goblin;
     public GameObject target;
-
+    int g;
+    public int StartingMorale;
+    public int MaxMorale;
+    private int _morale;
+    private int _maxMorale;
+    private int _deadGoblins;
+    private int _deadGoblinmorale;
+    public int DeadGoblinLimit;
 
     // Start is called before the first frame update
     void Start()
     {
+        _morale = StartingMorale;
+        g = 0;
         _target = _player;
         _maxGoblins = startingGlobks;
         for (int i = 0; i <= _maxGoblins; i++)
         {
             GameObject thisgloblin;
-            thisgloblin = GameObject.Instantiate(goblin, goblinSpawn.transform.position, goblinSpawn.transform.rotation);
+            thisgloblin = GameObject.Instantiate(goblin[g], goblinSpawn.transform.position, goblinSpawn.transform.rotation);
             _globlins.Add(thisgloblin);
             thisgloblin = _globlins[i];
             thisgloblin.gameObject.GetComponent<GloblinAi>().target = goblinLeader;
         }
-
+        _deadGoblinmorale = 0;
         _maxGoblins = maxGoblins;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (_deadGoblinmorale >= 10)
+        {
+            takedamage();
+            _deadGoblinmorale = 0;
+        }
         if (Input.GetKey("1"))
         {
-            for (int i = 0; i <= _maxGoblins - _globlins.Count; i++)
+            for (int i = _globlins.Count; i <= _maxGoblins; i++)
             {
+                g = UnityEngine.Random.Range(0, goblin.Count());
                 GameObject thisgloblin;
-                thisgloblin = GameObject.Instantiate(goblin, goblinSpawn.transform.position, goblinSpawn.transform.rotation);
+                thisgloblin = GameObject.Instantiate(goblin[g], goblinSpawn.transform.position, goblinSpawn.transform.rotation);
                 _globlins.Add(thisgloblin);
                 thisgloblin = _globlins[i];
                 thisgloblin.gameObject.GetComponent<GloblinAi>().target = goblinLeader;
@@ -58,11 +74,16 @@ public class Goblinarmymain : MonoBehaviour
             {
                 _globlins.Remove(goblin);
                 goblin.GetComponent<GloblinAi>().die();
+                _deadGoblins++;
+                _deadGoblinmorale++;
             }
-        } 
-        if(_target.GetComponent<BaseTowerProjectile>().getHealth() <= 0)
+        }
+        if (_target != null)
         {
-            StopGoblinAttack(goblinLeader);
+            if (_target.GetComponent<BaseTowerProjectile>().getHealth() <= 0)
+            {
+                StopGoblinAttack(goblinLeader);
+            }
         }
     }
     public void StartGoblinAttack(GameObject tower)
@@ -83,5 +104,13 @@ public class Goblinarmymain : MonoBehaviour
             _globlins[i].GetComponent<GloblinAi>().attackmode = false;
             _globlins[i].GetComponent<GloblinAi>().SetTarget(Player);
         }
+    }
+    public void playertookdamage()
+    {
+        _morale--;
+    }
+    private void takedamage()
+    {
+        _morale--;
     }
 }

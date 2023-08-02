@@ -10,6 +10,7 @@ public class GameBehavior : MonoBehaviour
     public bool Win;
     public List<BaseTowerProjectile> towers;
     int Towersnum;
+    public GameObject goblinai;
     // Start is called before the first frame update
     void Start()
     {

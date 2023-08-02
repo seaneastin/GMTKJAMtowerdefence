@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Threading;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ProjectileSpawner : MonoBehaviour
 {
@@ -24,23 +21,29 @@ public class ProjectileSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (target.GetComponent<GloblinAi>().getHealth() <= 0 || target == null)
+        if (target != null)
         {
-            _targetset = false;
+            if (target.GetComponent<GloblinAi>().getHealth() <= 0)
+            {
+                _targetset = false;
+            }
         }
-        if(_timer < 0)
+        if (_timer < 0)
         {
             _timer = 0;
         }
         if (_timer == 0)
         {
-            _timer = _originaltime;
             if (_targetset)
             {
-                if (_fire)
+                _timer = _originaltime;
+                if (_targetset)
                 {
-                    gameObject.transform.LookAt(target.transform);
-                    GameObject.Instantiate(projectile, gameObject.transform.position, gameObject.transform.rotation);
+                    if (_fire)
+                    {
+                        gameObject.transform.LookAt(target.transform);
+                        GameObject.Instantiate(projectile, gameObject.transform.position, gameObject.transform.rotation);
+                    }
                 }
             }
         }
